@@ -1,15 +1,21 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: hello-world
-  namespace: openshift-gitops
+  name: helm-sample
 spec:
-  sourceNamespaces:
-  - openshift-gitops
   destination:
+    name: ''
+    namespace: ''
     server: 'https://kubernetes.default.svc'
-  project: default
-  source:
-    path: charts/hello-world
+  sources:
+  - path: charts/hello-world
     repoURL: 'https://github.com/harshil-codes/sample-helm'
     targetRevision: HEAD
+    helm:
+      valueFiles:
+      - $values/
+  - repoURL: 'https://github.com/harshil-codes/sample-helm-dep'
+    targetRevision: main
+    ref: values
+  project: default
+
