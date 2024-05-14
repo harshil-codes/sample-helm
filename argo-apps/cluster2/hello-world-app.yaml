@@ -4,6 +4,8 @@ metadata:
   name: hello-world
   namespace: openshift-gitops
 spec:
+  sourceNamespaces:
+  - openshift-gitops
   destination:
     server: 'https://kubernetes.default.svc'
   project: default
