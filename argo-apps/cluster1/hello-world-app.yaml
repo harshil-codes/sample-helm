@@ -6,8 +6,6 @@ spec:
   sourceNamespaces:
   - openshift-gitops
   destination:
-    name: ''
-    namespace: ''
     server: 'https://kubernetes.default.svc'
   sources:
   - path: charts/hello-world
