@@ -12,6 +12,7 @@ image:
 
 nameOverride: ""
 fullnameOverride: ""
+namespace: sample-helm
 
 serviceAccount:
   # Specifies whether a service account should be created
