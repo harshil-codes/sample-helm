@@ -4,6 +4,8 @@ metadata:
   name: httpd-app
   namespace: openshift-gitops
 spec:
+  sourceNamespaces:
+  - openshift-gitops
   destination:
     namespace: httpd-app
     server: 'https://kubernetes.default.svc'
