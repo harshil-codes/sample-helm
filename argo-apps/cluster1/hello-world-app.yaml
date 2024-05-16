@@ -14,7 +14,7 @@ spec:
     targetRevision: HEAD
     helm:
       valueFiles:
-      - https://github.com/harshil-codes/sample-helm-dep.git/values
+      - $values/values
   - repoURL: 'https://github.com/harshil-codes/sample-helm-dep'
     targetRevision: main
     ref: values
