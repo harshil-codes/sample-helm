@@ -15,7 +15,7 @@ spec:
     helm:
       valueFiles:
       - $values/values/values.yaml
-      - charts/hello-world/values.yaml
+      - values.yaml
   - repoURL: 'https://github.com/harshil-codes/sample-helm-dep'
     targetRevision: main
     ref: values
